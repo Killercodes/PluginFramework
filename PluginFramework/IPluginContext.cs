@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PluginFramework
 {
@@ -6,12 +7,13 @@ namespace PluginFramework
     public interface IPluginContext
     {
         event Notification INotify;
-        System.Collections.Generic.Dictionary<string, object> Parameters { get; set; }
+        Dictionary<string, object> Parameters { get; set; }
 
         object this[string index]
         {
             get;
             set;
         }
+        void Log (string message);
     }
 }

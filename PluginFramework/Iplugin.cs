@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace PluginFramework
 {
@@ -11,11 +7,6 @@ namespace PluginFramework
     /// </summary>
     public interface IPlugin
     {
-        /// <summary>
-        /// Name of Plugin
-        /// </summary>
-        String Name { get; }
-
         /// <summary>
         /// Order of plugin
         /// </summary>
@@ -30,9 +21,6 @@ namespace PluginFramework
         /// The execute method
         /// </summary>
         /// <param name="pluginContext"></param>
-        void Execute(ref IPluginContext pluginContext);
-
-        event Notification INotify;
-        
+        void Execute(ref IPluginContext pluginContext);        
     }
 }
