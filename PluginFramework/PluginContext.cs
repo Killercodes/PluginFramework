@@ -8,11 +8,11 @@ namespace PluginFramework
 
     public class PluginContext :IPluginContext
     {
-        private Dictionary<int, Object> dictContext;
+        private Dictionary<string, Object> dictContext;
 
         public PluginContext ()
         {
-            dictContext = new Dictionary<int, Object>();
+            dictContext = new Dictionary<string, Object>();
         }
 
         public int Count
@@ -29,12 +29,12 @@ namespace PluginFramework
         }
 
 
-        public void Add (int key, Object value)
+        public void Add (string key, Object value)
         {
             dictContext.Add(key, value);
         }
 
-        public bool Remove (int key)
+        public bool Remove (string key)
         {
             return dictContext.Remove(key);
         }
